@@ -1,0 +1,20 @@
+﻿@model Product
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">Product Name: @Model.Title</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Product Id: @Model.Id</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Product Title: @Model.Title</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Product Description: @Model.Description</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Product Quantity: @Model.Quantity</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Category Name: @Model.category!.Name</h6>
+
+        
+        
+<a asp-controller="Product" asp-action="Index" class="btn btn-primary mt-4">Back</a>
+    </div>
+
+</div>
+<div class="text-center">
+    <img src="~/image/@Model.ImagePath" style="width:1000px">
+</div>

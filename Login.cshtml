@@ -1,0 +1,91 @@
+﻿@model PROJECTITI.Models.User
+
+<form asp-action="Login" method="post">
+
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label"></label>
+        <input asp-for="Email" type="email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Password" class="form-label"></label>
+        <input asp-for="Password" type="password" class="form-control" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+
+    <div>
+        <input type="submit" value="Login" class="btn btn-primary" />
+    </div>
+</form>
+
+@*// GET: Login
+        [HttpGet]
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        // POST: Login
+        [HttpPost]
+        public IActionResult Login(User model)
+        {
+            if (!ModelState.IsValid)
+            {
+                ModelState.AddModelError("", "Invalid login attempt.");
+                return View(model);
+            }
+
+            // Validate user credentials
+            var user = db.Users
+                .FirstOrDefault(u => u.Email == model.Email && u.Password == model.Password);
+
+            if (user == null)
+            {
+                ModelState.AddModelError("", "Invalid email or password.");
+                return View(model);
+            }
+
+          *@
+
+
+
+
+
+@*// GET: Login
+        [HttpGet]
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        // POST: Login
+        [HttpPost]
+        public IActionResult Login(User model)
+        {
+            if (!ModelState.IsValid)
+            {
+                ModelState.AddModelError("", "Invalid login attempt.");
+                return View(model);
+            }
+
+            // Validate user credentials
+            var user = db.Users
+                .FirstOrDefault(u => u.Email == model.Email && u.Password == model.Password);
+
+            if (user == null)
+            {
+                ModelState.AddModelError("", "Invalid email or password.");
+                return View(model);
+            }
+
+            // You may want to add authentication logic here
+
+            return RedirectToAction("Index", "Products"); // Redirect to products page after successful login
+        }*@
+
+
+        
+
